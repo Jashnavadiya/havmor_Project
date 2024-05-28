@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo33| Havmor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/admin/css/extra123.css">
+    <style>
+        /* Styles unchanged */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .location_icon_sidebar a img,
+            .surprise_icon_sidebar a img,
+            .search_icon_sidebar img {
+                filter: brightness(0) saturate(100%) invert(100%);
+            }
+        #img{
+            min-width: 200px;
+            object-fit: contain;
+            height: 200px;
+        }
+
+        p{
+            margin: 0;
+        }
+        /*swaipwer------------------------*/
+        html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      /* display: block; */
+      /* width: 100%; */
+      height: 100%;
+      /* object-fit: cover; */
+    }
+
+    .swiper {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+        
+
+        .container1 {
+            display: flex;
+            /* justify-content: space-between; */
+            /* align-items: flex-start; */
+            height: 100%;
+            width: 100%;
+            /* margin: 0 auto; */
+        }
+
+        .select-flavour {
+            /* position: fixed;
+           
+            overflow-y: scroll;
+            top: 70%;
+            bottom: 0; */
+            position: sticky;
+            top: 0;
+           max-height:100vh; 
+            width: 20%;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-right: 1px solid #ddd;
+        }
+
+        .select-flavour h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .sort-button {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .sort-button button {
+            background-color: #d3002b;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .sort-button button:hover {
+            background-color: darkred;
+        }
+
+        .flavor-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* background-color: #d3002b; */
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .flavor-buttons button {
+            background-color: #f8f9fa;
+            border: none;
+            color: rgb(0, 0, 0);
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+            margin: 5px 0;
+            width: 100%;
+        }
+
+        .flavor-buttons button:hover {
+        }
+
+
+
+
+
+
+
+
+
+
+        /* .slideshow-container {
+            max-width: auto;
+            position: relative;
+            height: 100%;
+        }
+
+        .mySlides {
+            display: none;
+            height: 100%;
+        }
+
+        .mySlides img {
+            width: 100%;
+            height: 500px;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        } */
+
+
+
+
+
+
+
+
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        .dot-container {
+            text-align: center;
+            position: relative;
+            bottom: 40px;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 20px;
+            width: 20px;
+            margin: 2px 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            bottom: 20px;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 0.5s;
+            animation-name: fade;
+            animation-duration: 0.5s;
+        }
+
+        /* .product-section */
+
+        .product-section {
+            width: 25%;
+            display: flex;
+            /* flex-wrap: nowrap; */
+            justify-content: space-around;
+            margin: 30px 0;
+        }
+
+        .product {
+            width: 100%;
+            /* Adjust width as needed */
+            border-right: 1px solid #ddd;
+            margin-bottom: 20px;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .product-title {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .product-details {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .buy-button {
+            background-color: #d3002b;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+
+        .buy-button:hover {
+            background-color: darkred;
+        }
+
+        .p {
+            width: 80%;
+            display: flex;
+            padding: 10px 0;
+            flex-wrap: wrap;
+            background-color: #fffbf1;
+        }
+        .atag {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  margin-left: 50px;
+  font-size: 22px;
+  align-items: bottom;
+  width: 12%;
+  justify-content: space-evenly;
+  text-decoration: none;
+  color: white;
+  z-index: 100;
+}
+
+.bi-arrow-left {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.swiper-pagination-bullet-active,.swiper-pagination-bullet{
+    background-color: white;
+    width: 14px;
+    height: 14px;
+}
+.showpro-info {
+  width: 100%;
+  position: relative;
+  /* background-color: red; */
+}
+
+        
+        /* @media only screen and (max-width: 600px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .select-flavour,
+            .slideshow-container {
+                width: 100%;
+            }
+
+            .product-section {
+                width: 30%;
+            }
+        }
+
+        @media only screen and (max-width: 425px) {
+
+            .prev,
+            .next {
+                font-size: 14px;
+                padding: 12px;
+                margin-top: -18px;
+            }
+
+            .Section .b {
+                font-size: 12px;
+                padding: 8px 12px;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .Section .b {
+                font-size: 12px;
+                padding: 8px 16px;
+            }
+        } */
+
+
+
+
+        .Section {
+
+            display: flex;
+            justify-content: space-around;
+            background-color: #d3002b;
+            padding: 10px 0;
+            margin: 0;
+        }
+
+        .Section .b {
+            background-color: #d3002b;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            flex: 1;
+            margin: 0 0px;
+            border-right: 1px solid #ddd;
+
+        }
+
+        .Section b:hover {
+            background-color: #d3002b;
+        }
+
+        .rrow{
+            height: 470px;
+        }
+        .fade:not(.show){
+            opacity: 1;
+        }
+        #cy img{
+            width: 30px;
+            height: 30px;
+            margin-right: 20px;
+            
+        }
+        #load_more{
+            width: 100%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            font-size: 22px;
+            color: #d3002b;
+        }
+        #cy{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            margin: auto;
+            width: 80%;
+        }
+        #cy span{
+            display: flex;
+            flex-direction: row;
+        }
+        #header{
+            z-index: 101;
+            width: 100%;
+        }
+        .info{
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+ 
+
+    </style>
+     <link rel="stylesheet" href="/css/mediaQuery.css">
+</head>
+
+<body>
+    <div id="header">
+
+
+    </div>
+    <div class="main-search-page">
+
+    </div>
+    <div class="main-side-nav">
+
+    </div>
+
+  <div class="layout-content">
+    <div class="rrow">
+
+
+
+
+        <!-- <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="https://www.havmor.com/sites/default/files/banners/product-new-banner-desktop.webp"
+                    style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="https://www.havmor.com/sites/default/files/banners/website-banners-product-listing-desktop.webp"
+                    style="width:100%">
+            </div> -->
+
+            <!-- <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+            </div> -->
+            <!-- <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div> -->
+
+
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="https://www.havmor.com/sites/default/files/banners/product-new-banner-desktop.webp" alt=""
+                    style="width:100%">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://www.havmor.com/sites/default/files/banners/website-banners-product-listing-desktop.webp" alt=""
+                    style="width:100%">
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <a class="atag" href="../index.html">
+                <i class="bi bi-arrow-left"></i>
+                <p class="info">Home-products</p>
+            </a>
+          </div>
+
+
+
+          <!-- <a class="atag" href="../pages/flavour.html">
+            <i class="bi bi-arrow-left"></i>
+            <p class="info">Home-Fruits- Black Currant</p>
+        </a> -->
+    </div>
+    
+    <div class="Section">
+        <span  class="b"><i class="bi bi-sliders"></i> Section flavour</span>
+        <span id="Me_Time" class="b"> Me Time</span>
+        <span id="Get_Together" class="b"> Get Together</span>
+        <span id="Party_Time" class="b"> Party Time</span>
+        <span id="Save_Big" class="b"> Save Big</span>
+    </div>
+
+    <div class="container1">
+        <div class="select-flavour">
+            <div class="flavor-buttons" id="flavorButtons">
+                <button id="All"><span id="cy"><img  alt=""><span>All</span></span></button>
+                <button id="Chocolate"><span id="cy"><img  alt=""><span>Chocolate</span></span></button>
+                <button id="Dry_Fruits"><span id="cy"><img  alt=""><span>Dry Fruits</span></span></button>
+                <button id="Indian_Traditional"><span id="cy"><img  alt=""><span>Indian Traditional</span></span></button>
+                <button id="Fruits" ><span id="cy"><img  alt=""><span>Fruits</span></span></button>
+                <button id="International" ><span id="cy"><img  alt=""><span>International</span></span></button>
+                <button id="LOTTE"><span id="cy"><img  alt=""><span>LOTTE</span></span></button>
+            </div>
+        </div>
+        <div class="p">
+            <!-- <div class="product-section">
+                <div class="product">
+                    <img src="https://www.havmor.com/sites/default/files/styles/380x273/public/products/shahi-kesar-1.jpg?itok=enJsscdg"
+                        alt="">
+                    <h3 class="product-title">Shahi Kesar</h3>
+                    <p class="product-details">750 ml</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+
+            </div>
+            <div class="product-section">
+                <div class="product">
+                    <img src="https://www.havmor.com/sites/default/files/styles/380x273/public/products/Rajwadi-Kulfi.jpg?itok=9QGQLjfx"
+                        alt="">
+                    <h3 class="product-title">Mava malai</h3>
+                    <p class="product-details">50 ml</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+
+            </div>
+            <div class="product-section">
+                <div class="product">
+                    <img src="https://www.havmor.com/sites/default/files/styles/380x273/public/products/cookie-and-cream.jpg?itok=cv2HItCj"
+                        alt="">
+                    <h3 class="product-title">Oreo </h3>
+                    <p class="product-details">110 ml</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+
+            </div>
+            <div class="product-section">
+                <div class="product">
+                    <img src="https://www.havmor.com/sites/default/files/styles/380x273/public/products/jaljeera.jpg?itok=cHTtS4ps"
+                        alt="">
+                    <h3 class="product-title">Jaljeera Ice candy</h3>
+                    <p class="product-details">50 ml</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+
+            </div>
+            <div class="product-section">
+                <div class="product">
+                    <img src="https://www.havmor.com/sites/default/files/styles/380x273/public/products/shahi-kesar-1.jpg?itok=enJsscdg"
+                        alt="">
+                    <h3 class="product-title">Shahi Kesar</h3>
+                    <p class="product-details">750 ml</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+
+            </div>
+            <div class="product-section">
+                <div class="product">
+                    <img src="https://www.havmor.com/sites/default/files/styles/380x273/public/products/shahi-kesar-1.jpg?itok=enJsscdg"
+                        alt="">
+                    <h3 class="product-title">Shahi Kesar</h3>
+                    <p class="product-details">750 ml</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+
+            </div>
+            <div class="product-section">
+                <div class="product">
+                    <img src="https://www.havmor.com/sites/default/files/styles/380x273/public/products/shahi-kesar-1.jpg?itok=enJsscdg"
+                        alt="">
+                    <h3 class="product-title">Shahi Kesar</h3>
+                    <p class="product-details">750 ml</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+
+            </div>
+            <div class="product-section">
+                <div class="product">
+                    <img src="https://www.havmor.com/sites/default/files/styles/380x273/public/products/shahi-kesar-1.jpg?itok=enJsscdg"
+                        alt="">
+                    <h3 class="product-title">Shahi Kesar</h3>
+                    <p class="product-details">750 ml</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+
+            </div>
+            <div class="product-section">
+                <div class="product">
+                    <img src="https://www.havmor.com/sites/default/files/styles/380x273/public/products/shahi-kesar-1.jpg?itok=enJsscdg"
+                        alt="">
+                    <h3 class="product-title">Shahi Kesar</h3>
+                    <p class="product-details">750 ml</p>
+                    <button class="buy-button">Buy</button>
+                </div>
+
+            </div>
+
+
+ -->
+
+        </div>
+        
+   
+
+
+    </div>
+  </div>
+
+    <!-- <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function plusSlides(n) {
+            slideIndex += n;
+            showSlides();
+        }
+
+        function currentSlide(n) {
+            slideIndex = n - 1;
+            showSlides();
+        }
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setInterval(showSlides, 8000); // Change image every 5 seconds
+        }
+
+        function sortFlavors() {
+            var flavorButtons = document.getElementById('flavorButtons');
+            var buttons = Array.from(flavorButtons.getElementsByTagName('button'));
+            buttons.sort(function (a, b) {
+                return a.innerHTML.localeCompare(b.innerHTML);
+            });
+            flavorButtons.innerHTML = '';
+            buttons.forEach(function (btn) {
+                flavorButtons.appendChild(btn);
+            });
+        }
+    </script> -->
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          loop: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          }
+        });
+      </script>
+
+
+</body>
+<script src="../js/commonHeader.js" type="module"></script>
+<script src="../js/flavour.js" type="module"></script>
+<script src="/components/somesearch.js" type="module"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</html>
