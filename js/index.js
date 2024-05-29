@@ -20,3 +20,12 @@ let closeCheckOut = document.querySelector(".cancel-checkout")
 closeCheckOut.addEventListener("click", () => {
     document.querySelector(".checkouts").style.display = "none";
 });
+
+if(window.screen.width>750){
+    document.querySelector('.cow_img_change').src="https://www.havmor.com/themes/havmornew/images/home-bg-img-mob.webp"
+}
+else{
+    document.querySelector('.cow_img_change').src="https://www.havmor.com/themes/havmornew/images/home-bg-img.webp"
+
+}
+console.log(window.screen.width);
