@@ -427,7 +427,7 @@ h3 {
   justify-content: start;
   align-items: center;
 }
-@media(max-width:750px){
+@media(max-width:450px){
 .footer div div{
   flex-wrap:wrap ;
   justify-content: left;
@@ -458,7 +458,37 @@ h3 {
   width: 30px;
 }
 #knowusbetter .homeProductInfoSec h4{
-  margin-bottom: 10px;
+  margin-bottom: 7px;
+  font-size: 17px;
+  padding: 5px;
+}
+#knowusbetter .homeProductInfoSec p{
+  font-size: 10px;
+ 
+}
+#knowusbetter .homeProductInfoSec a{
+  padding: 0 3px;
+}
+}
+@media(min-width:451px) and (max-width:750px){
+ .cow_img_carosel{
+  display: flex;
+  align-items: center;
+ }
+.homeProductInfoContentWrap img{
+  width: 30px;
+}
+#knowusbetter .homeProductInfoSec h4{
+  margin-bottom: 7px;
+  font-size: 17px;
+  padding: 5px;
+}
+#knowusbetter .homeProductInfoSec p{
+  font-size: 10px;
+ 
+}
+#knowusbetter .homeProductInfoSec a{
+  padding: 0 3px;
 }
 }
 @media(min-width:751px){
@@ -473,4 +503,23 @@ h3 {
   top: 0;
   height: min-content;
   right: 0;
+}
+.carousel-indicators button{
+  
+}
+.carousel-indicators [data-bs-target] {
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  background-color: gray;
+  overflow: hidden;
+}
+.carousel-indicators{
+  position: absolute;
+  bottom: -10px;
+}
+#cow_img_carosel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
