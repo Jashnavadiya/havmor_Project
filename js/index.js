@@ -22,10 +22,10 @@ closeCheckOut.addEventListener("click", () => {
 });
 
 if(window.screen.width>750){
-    document.querySelector('.cow_img_change').src="https://www.havmor.com/themes/havmornew/images/home-bg-img-mob.webp"
+    document.querySelector('.cow_img_change').src="https://www.havmor.com/themes/havmornew/images/home-bg-img.webp"
 }
 else{
-    document.querySelector('.cow_img_change').src="https://www.havmor.com/themes/havmornew/images/home-bg-img.webp"
+    document.querySelector('.cow_img_change').src="https://www.havmor.com/themes/havmornew/images/home-bg-img-mob.webp"
 
 }
 console.log(window.screen.width);
