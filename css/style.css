@@ -454,4 +454,23 @@ h3 {
 .cow_img_change{
   height: 100%;
 }
+.homeProductInfoContentWrap img{
+  width: 30px;
+}
+#knowusbetter .homeProductInfoSec h4{
+  margin-bottom: 10px;
+}
+}
+@media(min-width:751px){
+  .cow_img_carosel{
+    visibility: hidden;
+  }
+}
+.helio{
+  position: static;
+}
+.cow_img_carosel{
+  top: 0;
+  height: min-content;
+  right: 0;
 }
