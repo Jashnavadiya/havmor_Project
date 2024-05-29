@@ -469,6 +469,10 @@ h3 {
 #knowusbetter .homeProductInfoSec a{
   padding: 0 3px;
 }
+.cow_img_carosel{
+  display: flex;
+  align-items: center;
+ }
 }
 @media(min-width:451px) and (max-width:750px){
  .cow_img_carosel{
