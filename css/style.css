@@ -446,4 +446,9 @@ h3 {
   width: 8px;
   background: #ccc;
 }
+.cow_img_carosel{
+  width: 50%;
+  margin-left: auto;
+  height: 100%;
+}
 }
