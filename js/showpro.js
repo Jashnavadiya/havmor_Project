@@ -1,25 +1,25 @@
 import GetData from "../admin/components/get.js";
 import co from "../components/checkout.js";
 import Footer from "../components/footer.js";
-document.querySelector('.checkouts').innerHTML=co()
+document.querySelector('.checkouts').innerHTML = co()
 document.querySelector('.checkouts').classList.add('hidden')
-let ishi=location.search.replace('&isbuy=', '').split('')
+let ishi = location.search.replace('&isbuy=', '').split('')
 
-let isbuy=ishi.splice(8,11)
+let isbuy = ishi.splice(8, 11)
 console.log(isbuy);
-if(isbuy[0]=="t"){
-document.querySelector('.checkouts').classList.remove('hidden')
+if (isbuy[0] == "t") {
+  document.querySelector('.checkouts').classList.remove('hidden')
 }
-document.querySelector('.cancel-checkout img').addEventListener('click',()=>{
+document.querySelector('.cancel-checkout img').addEventListener('click', () => {
   document.querySelector('.checkouts').classList.add('hidden')
 
 })
 document.getElementById("footer").innerHTML = Footer();
 let hi = location.search.replace('?id=', '')
-let ids= hi.split('&')[0]
+let ids = hi.split('&')[0]
 console.log(ids);
 let hii = location.search.replace('?title=', '')
-let idss= hii.split('&')[0]
+let idss = hii.split('&')[0]
 console.log(idss);
 const ui = (data) => {
   document.querySelector(".pro-image").innerHTML = "";
@@ -50,7 +50,7 @@ const ui = (data) => {
     let buybtn = document.createElement("button");
     buybtn.innerHTML = "Buy Now";
     buybtn.setAttribute("id", "buybtn");
-    buybtn.addEventListener('click',()=>{
+    buybtn.addEventListener('click', () => {
       document.querySelector('.checkouts').classList.remove('hidden')
     })
 
@@ -64,9 +64,10 @@ const Get = async () => {
   let res = await GetData(`https://havmor-server.onrender.com/products?id=${ids}`);
 
   ui(res);
-  let res1=await GetData(`https://havmor-server.onrender.com/products?title=${idss}`);
-  if(res1.length>0){
-  ui(res1)}
+  let res1 = await GetData(`https://havmor-server.onrender.com/products?title=${idss}`);
+  if (res1.length > 0) {
+    ui(res1)
+  }
 };
 
 Get();
@@ -85,7 +86,7 @@ const ing = (ingdata) => {
       any2.classList.remove("activeacteofnutri");
       any.classList.add("activeacteofnutri");
     });
-    
+
     let any = document.createElement("a");
     any.innerHTML = "INGREDIENTS";
     any.setAttribute("id", "any");
@@ -117,6 +118,10 @@ const ing = (ingdata) => {
     any.classList.add("activeacteofnutri");
 
     document.querySelector(".ing").append(show, real_content);
+    console.log(ele.ingre == "" && ele.nutri == "");
+    if (ele.ingre == "" && ele.nutri == "") {
+      document.querySelector(".ing").innerHTML = "";
+    }
   });
 };
 
@@ -125,8 +130,8 @@ const Get3 = async () => {
   let res = await GetData(`https://havmor-server.onrender.com/products?id=${ids}`);
 
   ing(res);
-  let res1=await GetData(`https://havmor-server.onrender.com/products?title=${idss}`);
-  if(res1.length>0){
+  let res1 = await GetData(`https://havmor-server.onrender.com/products?title=${idss}`);
+  if (res1.length > 0) {
 
     ing(res1)
   }
@@ -159,10 +164,15 @@ const ui2 = (inf) => {
     buybtn.setAttribute("id", "buybtn2");
 
     main.append(imgdiv, tit, buybtn);
-    main.addEventListener('click',()=>{
-      // window.location.href=`../pages/showpro.html?id=${ele.id}`
+    buybtn.addEventListener('click', () => {
       document.querySelector('.checkouts').classList.remove('hidden')
     })
+    imgdiv.addEventListener('click',()=>{
+
+      window.location.href=`../pages/showpro.html?id=${ele.id}`
+    })
+
+
     document.querySelector(".secondpro").append(main);
   });
 };

@@ -78,14 +78,16 @@ const getflav=async(name)=>{
         document.querySelector(`#${name} #cy img`).src=`https://www.havmor.com/themes/havmornew/images/active-radio.webp`
 
     }
-
+    se2()
 }
 const getCata=async(name)=>{
     let res=await GetData(`https://havmor-server.onrender.com/products?cata=${name}`)
     console.log(name);
     console.log(res);
     ui(res)
+    se1()
 }
+
 document.getElementById('Me_Time').addEventListener('click',()=>getCata("Me_Time"))
 document.getElementById('Get_Together').addEventListener('click',()=>getCata("Get_Together"))
 document.getElementById('Party_Time').addEventListener('click',()=>getCata("Party_Time"))
@@ -109,3 +111,21 @@ document.querySelector('#All #cy img').src="https://www.havmor.com/themes/havmor
     document.querySelector('#Fruits #cy img').src="https://www.havmor.com/themes/havmornew/images/radio.webp"
     document.querySelector('#International #cy img').src="https://www.havmor.com/themes/havmornew/images/radio.webp"
     document.querySelector('#LOTTE #cy img').src="https://www.havmor.com/themes/havmornew/images/radio.webp"
+
+
+    const se1=()=>{
+        
+            document.querySelector('.Section').classList.toggle('visblee_hiden')
+    }
+    const se2=()=>{
+        
+            document.querySelector('.select-flavour').classList.toggle('visblee_hiden')
+    }
+   
+    document.querySelector('.re-1').addEventListener('click',se1)
+    document.querySelector('.Section > span').addEventListener('click',se1)
+    document.querySelector('.re-2').addEventListener('click',se2)
+    document.querySelector('.flavor-buttons > button').addEventListener('click',se2)
+
+    se1()
+    se2()

@@ -67,7 +67,7 @@ const Footer = () => {
                     <div class="customerCareInfo">
                         <h4 class="text-uppercase">Customer Care</h4>
                         <p><a href="tel:02242460606" class="text-decoration-none" style="color: #000516;">022 4246 0606</a></p>
-                        <ul class="d-flex p-0 py-4">
+                        <ul class="d-flex footer_icon p-0 py-4">
                             <li>
                                 <a href="https://www.facebook.com/HavmorIcecreams" target="_blank"
                                     class="socialIcon fbIcon"><i class="bi bi-facebook"></i></a>

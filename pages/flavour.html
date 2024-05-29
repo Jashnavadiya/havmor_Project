@@ -32,7 +32,7 @@
                 filter: brightness(0) saturate(100%) invert(100%);
             }
         #img{
-            min-width: 200px;
+            min-width: 10px;
             object-fit: contain;
             height: 200px;
         }
@@ -162,67 +162,8 @@
             margin: 5px 0;
             width: 100%;
         }
-
         .flavor-buttons button:hover {
         }
-
-
-
-
-
-
-
-
-
-
-        /* .slideshow-container {
-            max-width: auto;
-            position: relative;
-            height: 100%;
-        }
-
-        .mySlides {
-            display: none;
-            height: 100%;
-        }
-
-        .mySlides img {
-            width: 100%;
-            height: 500px;
-        }
-
-        .prev,
-        .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-        }
-
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-
-        .prev:hover,
-        .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        } */
-
-
-
-
-
-
-
-
         .text {
             color: #f2f2f2;
             font-size: 15px;
@@ -232,7 +173,6 @@
             width: 100%;
             text-align: center;
         }
-
         .numbertext {
             color: #f2f2f2;
             font-size: 12px;
@@ -365,48 +305,6 @@
   /* background-color: red; */
 }
 
-        
-        /* @media only screen and (max-width: 600px) {
-            .container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .select-flavour,
-            .slideshow-container {
-                width: 100%;
-            }
-
-            .product-section {
-                width: 30%;
-            }
-        }
-
-        @media only screen and (max-width: 425px) {
-
-            .prev,
-            .next {
-                font-size: 14px;
-                padding: 12px;
-                margin-top: -18px;
-            }
-
-            .Section .b {
-                font-size: 12px;
-                padding: 8px 12px;
-            }
-        }
-
-        @media only screen and (max-width: 600px) {
-            .Section .b {
-                font-size: 12px;
-                padding: 8px 16px;
-            }
-        } */
-
-
-
-
         .Section {
 
             display: flex;
@@ -438,7 +336,7 @@
         }
 
         .rrow{
-            height: 470px;
+            max-height: 470px;
         }
         .fade:not(.show){
             opacity: 1;
@@ -478,6 +376,133 @@
     align-items: center;
 }
  
+
+    
+@media(max-width:750px){
+    .select-flavour{
+        position: fixed;
+        top: auto;
+        bottom: 50px;
+        z-index: 101;
+        background-color: #d3002b;
+        width: 100%;
+        height: fit-content;
+        
+    }
+    #flavorButtons{
+
+    }
+    #flavorButtons button{
+        background-color: transparent;
+        padding: 0;
+        color: white;
+    }
+    #cy img{
+        filter: brightness(0) invert(1)
+    }
+    
+    .p{
+        width: 100%;
+        margin-bottom: 60px;
+    }
+    .product-section{
+        width: 50%;
+        margin: 0;
+    }
+    .responsivetime{
+        position: fixed;
+        bottom: 0;
+        z-index: 101;
+        width: 100%;
+        background-color: #d3002b;
+        display: flex;
+        padding: 10px 0;
+    }
+    .responsivetime .re-1,.responsivetime .re-2{
+        width: 50%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        font-size: 17px;
+        color: white;
+    }
+    .responsivetime .re-1{
+        border-left: 1px solid white;
+    }
+    .responsivetime .re-2 i{
+        font-size: 30px;
+    }
+    #Sectionflavour{
+        display: none;
+    }
+    .Section{
+        position: fixed;
+        bottom: 50px;
+        z-index:101;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .visblee_hiden{
+        visibility: hidden;
+    }
+    .product{
+        margin: 0;
+    }
+    #img{
+        height: 110px;
+    }
+    .main-searchbar{
+        width: 60%;
+    }
+    .footer_icon{
+        width: 100%;
+    }
+    
+}
+
+@media(max-width:1000px) and (min-width:750px) {
+    #flavorButtons button{
+        padding: 0;
+    }
+    .select-flavour,.select-flavour div{
+        padding: 0;
+        
+    }
+    #cy img {
+        margin-right: 5px;
+        width: 20px;
+        height: 20px;
+    }
+    #cy span{
+        font-size: 15px;
+    }
+    .responsivetime{
+    display: none;
+}   
+}
+
+@media(max-width:1200px) and (min-width:1000px) {
+.responsivetime{
+    display: none;
+}
+}
+
+@media(max-width:1400px) and (min-width:1200px) {
+    .responsivetime{
+    display: none;
+}
+}
+
+@media(min-width:1400px) {
+    .responsivetime{
+    display: none;
+}
+}
+
 
     </style>
      <link rel="stylesheet" href="/css/mediaQuery.css">
@@ -552,8 +577,13 @@
         </a> -->
     </div>
     
+    <div class="responsivetime">
+        <div class="re-2"><i class="bi bi-sliders"></i> &nbsp;Section flavour</div>
+        <div class="re-1">Choose flavour</div>
+    </div>
+
     <div class="Section">
-        <span  class="b"><i class="bi bi-sliders"></i> Section flavour</span>
+        <span id="Sectionflavour" class="b"><i class="bi bi-sliders"></i> Section flavour</span>
         <span id="Me_Time" class="b"> Me Time</span>
         <span id="Get_Together" class="b"> Get Together</span>
         <span id="Party_Time" class="b"> Party Time</span>

@@ -18,10 +18,16 @@ const regex_valid=(data)=>{
     regex_email(remail)
     regex_un(run)
     regex_pass(rpass)
-    if((document.getElementById('password').value==document.getElementById('c_pass').value)&&(!run&&remail&&rpass)){
-        console.log(data);
-        document.getElementById('main_form').addEventListener('submit',()=>postUser(data))
-                    }
+    console.log(data);
+    console.log(run);
+    document.getElementById('main_form').addEventListener('submit',()=>{
+            if((document.getElementById('password').value==document.getElementById('c_pass').value)&&(!run&&remail&&rpass)){
+            alert('hi')
+            console.log(data);
+            PostData('https://havmor-server.onrender.com/admin',data)
+            window.location.href='../pages/admin.html'
+        }
+        })
 }
 function regex_email(remail){
     if(remail){
@@ -140,7 +146,7 @@ const postUser=(data)=>{
     fetch('https://havmor-server.onrender.com/admin',{
         method:"POST",
         headers:{"Content-Type":"Applicatin/json"},
-        body:JSON.stringify(data)
+        body:JSON.stringifydata
     })
     .then((res)=>res.json())
     .then((data)=>{
