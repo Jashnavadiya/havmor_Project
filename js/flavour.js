@@ -126,6 +126,15 @@ document.querySelector('#All #cy img').src="https://www.havmor.com/themes/havmor
     document.querySelector('.Section > span').addEventListener('click',se1)
     document.querySelector('.re-2').addEventListener('click',se2)
     document.querySelector('.flavor-buttons > button').addEventListener('click',se2)
+    if(window.screen.width>750){
+      document.getElementsByClassName('swiper_imgs')[0].src="https://www.havmor.com/sites/default/files/banners/product-new-banner-desktop.webp";
+      document.getElementsByClassName('swiper_imgs')[1].src="https://www.havmor.com/sites/default/files/banners/website-banners-product-listing-desktop.webp";
+
+    }
+    else{
+        document.getElementsByClassName('swiper_imgs')[0].src="https://www.havmor.com/sites/default/files/banners/product-banner-new-mobile.webp";
+      document.getElementsByClassName('swiper_imgs')[1].src="https://www.havmor.com/sites/default/files/banners/Banner-02-mobile_0.webp";
+    }
 
     se1()
     se2()
