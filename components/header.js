@@ -12,9 +12,9 @@ const Header = () => {
                     </div>
                     <div class="menuDetailsContainer d-flex ">
                         <div class="menuImg col-lg-4">
-                            <img src="https://www.havmor.com/themes/havmornew/images/menu-img.webp" class="d-none d-md-block ">
+                            <img src="https://www.havmor.com/themes/havmornew/images/menu-img.webp" class=" d-md-block ">
                         </div>
-                        <div class="menuListWrap col-lg-8 col-sm-12 col-12 mt-sm-3 mt-5">
+                        <div class="menuListWrap col-lg-8 col-sm-12 col-12">
                             <div>
                                 <ul class="d-flex justify-content-around">
                                     <div class="col-lg-5 col-sm-5 headerafter">

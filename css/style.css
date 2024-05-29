@@ -13,6 +13,7 @@ body {
 
 .menuWrap{
   width: 100%;
+  height: 100%;
 }
 
 .menuIcon,
@@ -34,8 +35,7 @@ body {
 
 .menuImg img {
   width: 85%;
-  margin-left: 25px;
-  margin-top: 70px;
+
 }
 
 .menuListWrap ul li a {
